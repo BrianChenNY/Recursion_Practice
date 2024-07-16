@@ -18,7 +18,7 @@ function reverse(str) {
   if (str.length <= 1) {
       return str;
   }
-  // Recursive case: take the last character and add it to the reverse of the rest
+  // Recursive case: take the last char and add it to the reverse of the rest
   return str[str.length - 1] + reverse(str.slice(0, str.length - 1));
 }
 

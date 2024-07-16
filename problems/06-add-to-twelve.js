@@ -15,19 +15,21 @@ addToTwelve([1]); // false
 
 function addToTwelve(arr) {
     // Base case: if there are less than two elements left
-    if (numbers.length < 2) {
+    if (arr.length < 2) {
       return false;
   }
   // Check if the first two elements sum to twelve
-  if (numbers[0] + numbers[1] === 12) {
+  if (arr[0] + arr[1] === 12) {
       return true;
   } else {
       // Recursive case: check the rest of the array
-      return addToTwelve(numbers.slice(1));
+      return addToTwelve(arr.slice(1));
   }
 }
 
-
+console.log(addToTwelve([1, 3, 4, 7, 5])); // true
+console.log(addToTwelve([1, 3, 4, 7, 6])); // false
+console.log(addToTwelve([1, 11, 4, 7, 6])); // true
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = addToTwelve;
